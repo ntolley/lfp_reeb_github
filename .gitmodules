@@ -1,0 +1,5 @@
+[submodule "template_hnn_github"]
+	path = template_hnn_github
+	url = https://github.com/ntolley/template_hnn_github
+	branch = master
+	datalad-id = b2b0b4f4-8a22-11ea-b1f5-595356683314
