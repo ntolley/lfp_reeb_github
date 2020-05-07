@@ -16,8 +16,8 @@ file_prefix = 'gbarEvPyrAmpa_sweep'
 data_dir = os.path.abspath('data/' + file_prefix + '/points/')
 save_dir = os.path.abspath('data/' + file_prefix + '/skeleton/')
 
-file_list = [f for f in listdir(data_dir) if isfile(join(data_dir, f))]
 
+file_list = listdir(data_dir)
 
 for csd_file in file_list:
     csd_file_name = csd_file.strip('.csv')
