@@ -13,20 +13,19 @@ from os.path import isfile, join
 from os import listdir
 
 file_prefix = 'gbarEvPyrAmpa_sweep'
-data_dir = os.path.abspath('data/' + file_prefix + '/points/')
-save_dir = os.path.abspath('data/' + file_prefix + '/skeleton/')
+data_dir = os.path.abspath('data/' + file_prefix + '/points')
+save_dir = os.path.abspath('data/' + file_prefix + '/skeleton')
 
 
 file_list = listdir(data_dir)
 
 for csd_file in file_list:
     csd_file_name = csd_file.strip('.csv')
-    csd_file_path = data_dir + csd_file
+    csd_file_path = data_dir + '/' + csd_file
 
     #Create path + file name to save skeleton node and arc data
     csd_node_string = save_dir + csd_file_name + '_nodes.csv'
     csd_arc_string = save_dir + csd_file_name + '_arcs.csv'
-
 
     #-------- Paraview Scripting Code (start)--------------
 
@@ -35,6 +34,7 @@ for csd_file in file_list:
 
     # create a new 'CSV Reader'
     surface_csv = CSVReader(FileName=[csd_file_path])
+
 
     # Properties modified on surface_csv
     surface_csv.HaveHeaders = 0
