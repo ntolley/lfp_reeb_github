@@ -14,7 +14,7 @@ from os import listdir
 
 file_prefix = 'gbarEvPyrAmpa_sweep'
 data_dir = os.path.abspath('data/' + file_prefix + '/points/')
-save_dir = os.path.abs('data/' + file_prefix + '/skeleton/')
+save_dir = os.path.abspath('data/' + file_prefix + '/skeleton/')
 
 file_list = [f for f in listdir(data_dir) if isfile(join(data_dir, f))]
 
