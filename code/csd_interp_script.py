@@ -11,7 +11,7 @@ file_prefix = 'gbarEvPyrAmpa_sweep'
 hnn_dir = os.path.abspath('template_hnn_github/data/' + file_prefix + '/hnn_out/data')
 
 os.mkdir('data/' + file_prefix)
-save_dir = os.path.abspath('data/' + file_prefix) #directory to store param files
+save_dir = os.path.abspath('data/' + file_prefix + '/points/') #directory to store param files
 
 for idx, f in enumerate(os.listdir(hnn_dir)):
     data_path = hnn_dir + '/' +  f + '/'
