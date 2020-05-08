@@ -8,7 +8,7 @@ file_prefix = 'gbarEvPyrAmpa_sweep'
 
 
 #Prepare directories
-parent_dir = os.path.abspath('../data/' + file_prefix)
+parent_dir = os.path.abspath('data/' + file_prefix)
 os.mkdir(parent_dir + '/skeleton')
 
 data_dir = os.path.abspath(parent_dir + '/points')
