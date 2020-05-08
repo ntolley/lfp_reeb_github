@@ -21,7 +21,7 @@ file_list = listdir(data_dir)
 
 for csd_file in file_list:
     csd_file_name = csd_file.strip('.csv')
-    csd_file_path = data_dir + '/' + csd_file
+    csd_file_path = os.path.abspath(data_dir + '/' + csd_file)
 
     #Create path + file name to save skeleton node and arc data
     csd_node_string = save_dir + csd_file_name + '_nodes.csv'
