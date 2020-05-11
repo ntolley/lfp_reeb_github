@@ -13,12 +13,7 @@ def decimate_mesh(grid, target):
     decimated = vtk.vtkPolyData()
     decimated.ShallowCopy(decimate.GetOutput())
 
-
-    data_decimated = vtk.vtkFloatArray()
-    data_decimated.SetNumberOfComponents(1)
-    data_decimated.SetName("Function Value")
-
-    return data_decimated
+    return decimated
 
 
 
@@ -50,9 +45,11 @@ def reeb_to_skeleton(reeb_graph, grid):
         vertex_pos = point_data.GetTuple(mesh_vertex_id) 
         vertex_list.append(list(vertex_pos))
 
+    return np.array(vertex_list), np.array(edge_list).astype(int)
+
 
 #Convert interpolated CSD points to a polygonal mesh
-def csd_to_mesh(filename):
+def csd_to_mesh(file_name):
     #Load data values into grid
     np_points = np.array(pd.read_csv(file_name))
     point_bounds = np.max(np_points,axis=0) + 1
