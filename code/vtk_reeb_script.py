@@ -117,7 +117,7 @@ for file_name in file_list:
       
    #Save Skeleton Data
    node_points = np.array(vertex_list)
-   node_connectivity = np.array(edge_list)
+   node_connectivity = np.array(edge_list).astype(int)
 
    file_name_stripped = file_name.strip('.csv')
    node_points_path = os.path.abspath(save_dir + '/' + file_name_stripped + '_nodes.csv')
