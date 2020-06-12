@@ -7,7 +7,7 @@ import csd_functions
 import os
 import sys
 
-file_prefix = 'gbarEvPyrAmpa_sweep'
+file_prefix = 'gbarEvPyrAmpa_reversed_inputs'
 hnn_dir = os.path.abspath('template_hnn_github/data/' + file_prefix + '/hnn_out/data')
 
 os.mkdir('data/' + file_prefix)

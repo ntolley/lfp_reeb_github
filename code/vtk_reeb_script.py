@@ -7,7 +7,7 @@ import networkx as nx
 
 
 #Enter Sweep name
-file_prefix = 'gbarEvPyrAmpa_sweep'
+file_prefix = 'gbarEvPyrAmpa_reversed_inputs'
 
 
 #Prepare directories
