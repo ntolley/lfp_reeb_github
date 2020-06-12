@@ -10,7 +10,7 @@ import sys
 file_prefix = 'gbarEvPyrAmpa_reversed_inputs'
 hnn_dir = os.path.abspath('template_hnn_github/data/' + file_prefix + '/hnn_out/data')
 
-os.mkdir('data/' + file_prefix)
+os.mkdir('data/' + file_prefix + '/points/')
 save_dir = os.path.abspath('data/' + file_prefix + '/points/') #directory to store param files
 
 for idx, f in enumerate(os.listdir(hnn_dir)):
